@@ -2,6 +2,8 @@
 include('smtp/PHPMailerAutoload.php');
 include('../token.php');
 
+//Defining the method before hand so that we can fetch the data from the get/post request and then call the function to send email
+
 function smtp_mailer($to,$subject, $msg){
 	$mail = new PHPMailer(); 
 	//$mail->SMTPDebug  = 3;
@@ -12,9 +14,9 @@ function smtp_mailer($to,$subject, $msg){
 	$mail->Port = 465; 
 	$mail->IsHTML(true);
 	$mail->CharSet = 'UTF-8';
-	$mail->Username = "api@3pixelsonline.in";
-	$mail->Password = "*Utk123rsh#";
-	$mail->SetFrom("api@3pixelsonline.in");
+	$mail->Username = "api@3pixelsonline.in"; //The email used to send email 
+	$mail->Password = "*Utk123rsh#"; //It's password
+	$mail->SetFrom("api@3pixelsonline.in"); //The from attribute of the email
 	$mail->Subject = $subject;
 	$mail->Body =$msg;
 	$mail->AddAddress($to);
