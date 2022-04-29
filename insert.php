@@ -20,7 +20,7 @@ if(isset($_POST['Name']) && isset($_POST['Email']) && isset($_POST['Phone']) && 
 else
 {
     $status="true";
-    $data="Provide";
+    $data="Provide Some Data to be inserted";
     $code="7";
 }
 

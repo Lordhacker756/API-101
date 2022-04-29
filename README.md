@@ -16,6 +16,14 @@ https://3pixelsonline.in/api/insert.php?token=UniqueToken
 ```
 **Note - For inserting data, the data must be sent as a POST request** 
 
+When the data sent is in JSON format, insert.php will not be able to process it, as it's meant for handling data sent as post request from a form.
+
+The endpoint for sending data as POST request is as follows
+```javascript
+https://3pixelsonline.in/api/json-insert.php?token=UniqueToken
+```
+
+
 The Third end-point is used for sending email. This is a concept based on the idea of having a PHP Mailer service on the cloud which can be accessed from any application regardless of the language it is coded upon.
 
 **How To Use Email API**
